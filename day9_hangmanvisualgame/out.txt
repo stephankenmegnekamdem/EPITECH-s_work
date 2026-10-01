@@ -1,0 +1,1 @@
+File given: word_list.txt
