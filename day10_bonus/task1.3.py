@@ -1,0 +1,3 @@
+a=list(filter(lambda x: x > 10, [3.14, 101, 42, 666, -1]))
+
+print(a)
