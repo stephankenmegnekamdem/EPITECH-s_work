@@ -1,0 +1,71 @@
+
+
+body {
+
+    background-color: grey;
+
+}
+.moving_square {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
+    animation: square_move 5s 5;
+}
+
+@keyframes square_move {
+    0% {
+        transform: translate(0, 0);
+        background-color: red;
+    }
+
+    25% {
+        transform: translateY(300px);
+        background-color: green;
+    }
+
+    50% {
+        transform: translate(300px, 300px);
+        background-color: blue;
+    }
+
+    75% {
+        transform: translate(300px, 0);
+        background-color: yellow;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        background-color: red;
+    }
+}
+
+header {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+
+.content {
+
+    display: flex;
+
+}
+
+main {
+
+    width: 80%;
+
+}
+
+aside {
+
+    width: 20%;
+
+}
+.box {
+    background-color: white;
+    border: 2px solid black;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
