@@ -162,7 +162,7 @@ def letters(window, alphabet):
         y=100
         w=280
         l=400
-        pygame.draw.rect(window, (30, 30, 40), (x, y, w, l))
+        pygame.draw.rect(window, (30, 30, 40), (x, y, w, l), 0)
         font = pygame.font.Font(None, 55)
 
         # 5 columns, 6 rows

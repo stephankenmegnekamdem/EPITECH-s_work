@@ -21,7 +21,17 @@ def draw_spiral_circle(turns):
 
     turtle.done()
 
-draw_spiral_circle(20)
+def draw_spiral(turns):
+    cursor = turtle.Turtle()
+    length=0.5
+    for i in range(turns):
+        cursor.forward(length)
+        cursor.right(22.5)
+        length += 0.5
 
-draw_spiral_square(5)
+
+    turtle.done()
+draw_spiral(100)
+
+
 

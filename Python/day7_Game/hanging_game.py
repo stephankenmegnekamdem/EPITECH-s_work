@@ -1,10 +1,10 @@
+
 import random
 import time
 start_time = time.time()
 from english_words import english_words_lower_set # python3 -m pip  install english-words==1.1.0 to download package
 # PIP (Package Installer for Python) to install packages
 #use good variable name
-
 
 # first brick
 def you_lose(num):

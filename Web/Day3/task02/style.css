@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+    body {
+        max-width: 767px;
+        width: 100%;
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header {
+        background-color: #67B3DD;
+        min-height: 50px;
+
+    }
+
+    #section1 {
+        background-color: #9EE062;
+        min-height:200px;
+    }
+
+    #section2 {
+        display: flex;
+        min-height:200px;
+        background-color: #FEDF6B;
+
+
+    }
+
+    #section2 article {
+        width: 50%;
+        min-height:100px;
+
+    }
+
+    #section2 article:nth-child(n+3) {
+        display: none;
+    }
+
+    footer {
+        min-height:50px;
+        background-color: #FC302D;
+
+    }

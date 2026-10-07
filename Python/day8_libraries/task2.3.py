@@ -6,7 +6,7 @@ def draw_polygon(n):
 
     for i in range(n):
 
-        cursor.forward(50)
+        cursor.forward(10)
         cursor.right(360/n)
 
     turtle.done()

@@ -59,4 +59,9 @@ def draw_oval_circle():
 
     turtle.done()
 
-draw_batman_sign()
+
+#draw batman_sign
+for _ in range(36):
+    turtle.circle(80)
+    turtle.left(10)
+turtle.done()

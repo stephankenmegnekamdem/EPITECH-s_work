@@ -11,7 +11,8 @@ titi = turtle.Turtle()    # this controls the turtle object
 titi.color("red")         # turtle should be red(leave behind red
 
 for i in range(3):       #for 3 turns,
-    titi.right(90)       #it turns right at an angle of 90 degrees
+
+    titi.right(90)  #it turns right at an angle of 90 degrees
     titi.circle(42)      #then makes a cirle of 42 diameter
 
 

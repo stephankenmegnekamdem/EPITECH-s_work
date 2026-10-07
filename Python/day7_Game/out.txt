@@ -1,0 +1,27 @@
+File given: word_list.txt
+Let's get started: Here's the word:  _ _ _ _ _ _ _ 
+Let's get started
+What's your first guess ?You already tried this letter
+Try a different letter
+Let's continue
+What's your next guess ?You already tried this letter
+Try a different letter
+Let's continue
+What's your next guess ?refe : incorrect guess
+You got -5 for wrong word
+You have 7 chances
+_ _ _ _ _ _ _ 
+Let's continue
+What's your next guess ?edw : incorrect guess
+You got -5 for wrong word
+You have 2 chances
+_ _ _ _ _ _ _ 
+Let's continue
+What's your next guess ?You already tried this letter
+Try a different letter
+Let's continue
+What's your next guess ?ew : incorrect guess
+You got -5 for wrong word
+You lose!
+_ _ _ _ _ _ _ 
+The word was project
