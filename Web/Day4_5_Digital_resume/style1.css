@@ -1,0 +1,152 @@
+/* ===== RESET ===== */
+.my-black{
+color: #1E3A5F !important;
+}
+.my-dark{
+color: #334155 !important;
+}
+.my-grey {
+color: #64748B !important;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+/* ===== PAGE FRAME =====
+   The body is a vertical flex column that fills the screen:
+   header (fixed) + main (grows & scrolls) + footer (fixed) */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+header {
+    flex-shrink: 0;              /* never squash the header */
+    height: 100px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E2E8F0;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #94A3B8;
+    border-radius: 50%;
+}
+
+/* right half of the header: menu / languages / contact / cv */
+.secondary-menu {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ===== MAIN (the only scrolling area) ===== */
+main {
+    flex: 1;                     /* take all space between header & footer */
+    overflow-y: auto;            /* scroll here, not on body */
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== ASIDE: projects strip, 75% wide, aligned right ===== */
+aside {
+    width: 75%;
+    align-self: flex-end;  /* push to the right side of main */
+    margin: 30px 30px 0 0;
+    padding: 10px;
+    background-color: #F8FAFC;
+    border: 5px solid #CBD5E1;
+    border-radius: 10px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;             /* thumbnails wrap on small widths */
+    justify-content: center;
+    gap: 10px;
+}
+
+.project img {
+    max-width: 130px;
+    border: 5px solid #CBD5E1;
+    border-radius: 8px;
+}
+
+.dropdown-content {
+    width: auto;
+    max-width: 500px;
+    background-color: #CBD5E1;
+    border: 5px solid #94A3B8;
+    border-radius: 10px;
+    color: #1E3A5F !important;
+}
+
+/* ===== DETAILED INFO: education / work / skills / certs ===== */
+.detailed-info {
+    margin: 30px;
+    padding: 10px;
+    background-color: #F1F5F9;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.my-icons{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.my-certifications{
+    width: 400px;
+    height: 400px;
+    object-fit : contain;
+}
+
+.sections {
+    padding: 30px;
+    background-color: #F8FAFC;   /* so you can see each block */
+    border-radius: 8px;
+    border: 5px solid #CBD5E1;
+
+    /* --- text containment --- */
+    min-width: 0;                  /* let flexbox shrink me below my content size */
+    max-width: 100%;               /* never grow past my parent */
+    overflow-wrap: break-word;     /* break long words/URLs instead of overflowing */
+    max-height: 300px;    /* pick whatever feels right */
+    overflow-y: auto;     /* scrollbar appears inside the block when needed */
+}
+
+/* ===== FOOTER ===== */
+footer {
+    flex-shrink: 0;
+    height: 130px;
+    background-color: #E2E8F0;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 767px) {
+    .profile img {
+        width: 65px;
+        height: 65px;
+    }
+    aside {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .detailed-info {
+        margin: 10px 0;
+    }
+    .dropdown-content{
+        width: 300px !important;/* override Materialize's auto width */
+    }
+}
