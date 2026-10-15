@@ -14,31 +14,20 @@
     <!-- ===================== HEADER ===================== -->
     <header>
 
-        <!-- Profile photo + dropdown bio -->
-        <div class="profile">
-            <a class="dropdown-trigger" href="#!" data-target="profile-menu">
-                <img src="assets/images/PHOTO-2026-09-28-17-15-02.jpg" alt="Photo of Stephan Kenmegne Kamdem">
-            </a>
-            <ul id="profile-menu" class="dropdown-content">
-                <li><h6 class="my-black"><b>KENMEGNE KAMDEM STEPHAN</b></h6></li>
-                <li><b>Nationality:</b> Cameroonian 🇨🇲</li>
-                <li><b>Gender:</b> Male</li>
-                <li>
-                    <p>
-                        Final-year Bachelor's Software Engineering student with 3.75/4 GPA selected
-                        for an Erasmus+ Internship Mobility and currently undertaking an Erasmus+
-                        Study Mobility at EPITECH Paris. Passionate about programming and software
-                        engineering, with a strong focus on understanding fundamental concepts and
-                        developing clean, efficient, and practical solutions. Eager to continuously
-                        learn new technologies, strengthen technical skills through hands-on
-                        experience, and build an international career in software engineering.
-                    </p>
-                </li>
-            </ul>
+         <!-- Right side of header: 4 items, all with the same structure -->
+                    <br>
 
-
-
-
+                <a class="dropdown-trigger" href="#!" data-target="main-menu">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul id="main-menu" class="dropdown-content">
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                </ul>
             <div>
                 <a class="dropdown-trigger" href="#!" data-target="language">Languages</a>
                 <ul id="language" class="dropdown-content">
@@ -91,7 +80,6 @@
                 </a>
             </div>
 
-        </div>
     </header>
 
     <!-- ===================== MAIN ===================== -->
@@ -99,25 +87,14 @@
 
         <!-- Projects strip (right-aligned, 75% wide) -->
         <aside>
-            <!-- Right side of header: 4 items, all with the same structure -->
+            <!-- Profile photo + dropdown bio -->
 
-
-            <div>
-                <a class="dropdown-trigger" href="#!" data-target="main-menu">
-                    <i class="material-icons">menu</i>
-                </a>
-                <ul id="main-menu" class="dropdown-content">
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h6 class="my-black"><b>KENMEGNE KAMDEM STEPHAN</b></h6>
-            <ul >
+            <div class="profile">
+            <a class="dropdown-trigger" id="profile" href="#!" data-target="profile-menu">
+                <img src="assets/images/PHOTO-2026-09-28-17-15-02.jpg" alt="Photo of Stephan Kenmegne Kamdem">
+            </a>
+            <ul id="profile-menu" class="dropdown-content">
+                <li><h6 class="my-black"><b>KENMEGNE KAMDEM STEPHAN</b></h6></li>
                 <li><b>Nationality:</b> Cameroonian 🇨🇲</li>
                 <li><b>Gender:</b> Male</li>
                 <li>
@@ -132,9 +109,29 @@
                     </p>
                 </li>
             </ul>
+
+
+                <h6 class="my-black"><b>KENMEGNE KAMDEM STEPHAN</b></h6>
+
+
+                <b>Nationality:</b> Cameroonian 🇨🇲<br><br>
+                <b>Gender:</b> Male<br><br>
+
+                    <p>
+                        Final-year Bachelor's Software Engineering student with 3.75/4 GPA selected
+                        for an Erasmus+ Internship Mobility and currently undertaking an Erasmus+
+                        Study Mobility at EPITECH Paris. Passionate about programming and software
+                        engineering, with a strong focus on understanding fundamental concepts and
+                        developing clean, efficient, and practical solutions. Eager to continuously
+                        learn new technologies, strengthen technical skills through hands-on
+                        experience, and build an international career in software engineering.
+                    </p>
+
             </div>
         </aside>
 
+
+        </div>
         <!-- Detailed info blocks -->
         <div class="detailed-info my-dark">
             <div class="sections" id="education">
@@ -348,7 +345,6 @@
 
     <!-- ===================== FOOTER ===================== -->
     <footer class="center-align my-black">
-        <br>
         <a href="tel:+33781185306"><i class="material-icons">phone</i>+33 7 81 18 53 06</a><br>
         <a href="https://wa.me/905010322630">
             <i class="fa-brands fa-whatsapp"></i>

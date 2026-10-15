@@ -8,6 +8,9 @@ color: #334155 !important;
 .my-grey {
 color: #64748B !important;
 }
+@page {
+  size: A4;
+}
 
 * {
     box-sizing: border-box;
@@ -17,37 +20,38 @@ color: #64748B !important;
    The body is a vertical flex column that fills the screen:
    header (fixed) + main (grows & scrolls) + footer (fixed) */
 body {
-    height: 100vh;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
 
 /* ===== HEADER ===== */
 header {
-    flex-shrink: 0;              /* never squash the header */
-    height: 100px;
-    padding: 10px 20px;
+    flex-shrink: 0; /* never squash the header */
+    height: 15mm;
+    padding: 20px;
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    text-align: center;
     justify-content: space-between;
     background-color: #E2E8F0;
 }
 
+.profile{
+    text-align: center;
+}
 .profile img {
     width: 100px;
     height: 100px;
     object-fit: cover;
+
     border: 3px solid #94A3B8;
     border-radius: 50%;
 }
 
-/* right half of the header: menu / languages / contact / cv */
-.profile {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+
+
 
 /* ===== MAIN (the only scrolling area) ===== */
 main {
@@ -55,17 +59,14 @@ main {
     overflow-y: auto;            /* scroll here, not on body */
     background-color: #FFFFFF;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 /* ===== ASIDE: projects strip, 75% wide, aligned right ===== */
 aside {
-    width: 50%;
-    margin: 30px;
-    gap: 10px;
-    padding: 10px;
+    width:30%;
     background-color: #F8FAFC;
-    border: 5px solid #CBD5E1;
+    border-right: 5px solid #CBD5E1;
     border-radius: 10px;
 
 }
@@ -89,12 +90,15 @@ aside {
 
 /* ===== DETAILED INFO: education / work / skills / certs ===== */
 .detailed-info {
-    margin: 30px;
+    width: 69.5%;
     padding: 10px;
     background-color: #F1F5F9;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    border-left: 5px solid #CBD5E1;
+    border-right: 5px solid  #CBD5E1;
+    border-radius: 10px;
+    gap: 2px;
 }
 .my-icons{
     width: 25px;
@@ -109,10 +113,11 @@ aside {
 }
 
 .sections {
-    padding: 30px;
+    padding: 5px;
     background-color: #F8FAFC;   /* so you can see each block */
     border-radius: 8px;
     border: 5px solid #CBD5E1;
+    gap: 2px;
 
     /* --- text containment --- */
     min-width: 0;                  /* let flexbox shrink me below my content size */
@@ -125,23 +130,14 @@ aside {
 /* ===== FOOTER ===== */
 footer {
     flex-shrink: 0;
-    height: 100px;
+    height: 20mm;
     background-color: #E2E8F0;
 }
 
 /* ===== MOBILE ===== */
 @media (max-width: 767px) {
-    .profile img {
-        width: 65px;
-        height: 65px;
-    }
-    aside {
-        width: 100%;
-        margin: 10px 0;
-    }
-    .detailed-info {
-        margin: 10px 0;
-    }
+
+
     .dropdown-content{
         width: 300px !important;/* override Materialize's auto width */
     }
