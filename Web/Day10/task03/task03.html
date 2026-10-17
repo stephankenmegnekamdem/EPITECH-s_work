@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+    <div>
+        <table id="countries">
+            <thead>
+                <tr><th>country-code</th>
+                    <th>name</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button type="button" id="load">Load countries</button>
+    </div>
+    <script>
+        document.getElementById("load").addEventListener("click", () =>{
+        fetch("countries.json")
+            .then(response => response.json())
+            .then(countries => {
+                   const tbody = document.querySelector("#countries tbody");
+                    tbody.innerHTML = "";
+
+                    Object.entries(countries).forEach(([code, name]) => {
+                        const row = document.createElement("tr");
+                        const cell1 = document.createElement("td");
+                        cell1.textContent = code;
+                        row.appendChild(cell1);
+
+                        const cell2 = document.createElement("td");
+                        cell2.textContent = name;
+                        row.appendChild(cell2);
+
+                        tbody.appendChild(row);
+                    });
+
+            });
+
+        })
+
+    </script>
+</body>
+</html>

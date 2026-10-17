@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        <div>
+            <label for="name" class ="form-label">name</label>
+            <input type="text" id="name" class="form-control">
+        </div>
+            <button type="button" id="send" class="">Submit</button>
+    </div>
+    <script>
+        document.getElementById("send").addEventListener("click", () =>{
+            const name = document.getElementById("name").value;
+            fetch("test.php?name=" + encodeURIComponent(name))
+                .then(response => response.json())
+                .then(data=> {
+                    alert(data.name)
+                })
+                .catch(()=>{
+                alert("An error has occured")
+            });
+        });
+    </script>
+</body>
+</html>
