@@ -43,7 +43,7 @@ document.getElementById("send").addEventListener("click", () => {
     clearMessages();
     resultBody.innerHTML = "";
 
-    const query = "task06.php?type=" + encodeURIComponent(type)
+    const query = "task05.php?type=" + encodeURIComponent(type)
         + "&brand=" + encodeURIComponent(brand)
         + "&price=" + encodeURIComponent(price)
         + "&number=" + encodeURIComponent(number);

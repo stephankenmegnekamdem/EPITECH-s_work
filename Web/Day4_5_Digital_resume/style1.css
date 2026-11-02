@@ -11,7 +11,15 @@ color: #64748B !important;
 @page {
   size: A4;
 }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 15mm;   /* same as header height */
+}
 
+section,
+[id] {
+    scroll-margin-top: 15mm;    /* same as header height */
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -28,7 +36,11 @@ body {
 
 /* ===== HEADER ===== */
 header {
-    flex-shrink: 0; /* never squash the header */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
     height: 15mm;
     padding: 20px;
     display: flex;
@@ -55,8 +67,8 @@ header {
 
 /* ===== MAIN (the only scrolling area) ===== */
 main {
-    flex: 1;                     /* take all space between header & footer */
-    overflow-y: auto;            /* scroll here, not on body */
+    margin-top: 15mm;      /* same as header height */
+    margin-bottom: 20mm;   /* same as footer height */
     background-color: #FFFFFF;
     display: flex;
     flex-direction: row;
@@ -66,7 +78,7 @@ main {
 aside {
     width:30%;
     background-color: #F8FAFC;
-    border-right: 5px solid #CBD5E1;
+    border: 5px solid #CBD5E1;
     border-radius: 10px;
 
 }
@@ -90,19 +102,14 @@ aside {
 
 /* ===== DETAILED INFO: education / work / skills / certs ===== */
 .detailed-info {
-    width: 69.5%;
-    padding: 10px;
+    width:70%;
     background-color: #F1F5F9;
     display: flex;
     flex-direction: column;
-    border-left: 5px solid #CBD5E1;
-    border-right: 5px solid  #CBD5E1;
-    border-radius: 10px;
-    gap: 2px;
 }
 .my-icons{
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     object-fit: contain;
 }
 
@@ -113,24 +120,24 @@ aside {
 }
 
 .sections {
-    padding: 5px;
     background-color: #F8FAFC;   /* so you can see each block */
     border-radius: 8px;
     border: 5px solid #CBD5E1;
-    gap: 2px;
+    padding: 5px;
 
     /* --- text containment --- */
     min-width: 0;                  /* let flexbox shrink me below my content size */
     max-width: 100%;               /* never grow past my parent */
     overflow-wrap: break-word;     /* break long words/URLs instead of overflowing */
-    max-height: 300px;    /* pick whatever feels right */
-    overflow-y: auto;     /* scrollbar appears inside the block when needed */
 }
 
 /* ===== FOOTER ===== */
 footer {
-    flex-shrink: 0;
-    height: 20mm;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
     background-color: #E2E8F0;
 }
 
@@ -140,5 +147,17 @@ footer {
 
     .dropdown-content{
         width: 300px !important;/* override Materialize's auto width */
+    }
+}
+@media print {
+    header,
+    footer {
+        display: none !important;
+    }
+
+    main {
+        margin-top: 0;
+        margin-bottom: 0;
+        overflow: visible;
     }
 }
