@@ -8,4 +8,11 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+# Java test files
+testMain.java
 
+# Compiled Java files
+*.class
+
+# IntelliJ IDEA build output
+out/
